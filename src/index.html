@@ -5,26 +5,25 @@
     <title>Caio Silva - Portfolio</title>
     <link rel="stylesheet" href="index.css" />
     <script type="module" src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/982cb6df9a.js" crossorigin="anonymous"></script>
   </head>
-  <body class="p-2 flex h-screen overflow-hidden">
-    <div class='p-6 min-w-fit w-1/3 h-full bg-gradient-to-b from-primary via-primary to-tertiary rounded-[25px] flex flex-col justify-between'>
-      <div>
-        <img class="w-20 rounded-full" src="https://avatars.githubusercontent.com/u/34246280" alt="Foto do Caio"/>
-        <div class="flex items-end mt-4">
+  <body class="p-2 lg:flex lg:h-screen lg:overflow-hidden sm:flex-col md:flex-col lg:flex-row">
+    <div class='p-6 h-min lg:min-w-fit lg:w-1/3 lg:h-full bg-gradient-to-b from-primary via-primary to-tertiary rounded-[25px] flex flex-col justify-between md:w-full lg:w-1/3 lg:h-full'>
+    <div class="flex sm:flex-row md:flex-row lg:flex-col">
+      <img class="w-20 rounded-full" src="https://avatars.githubusercontent.com/u/34246280" alt="Foto do Caio"/>
+        <div class="flex flex-col ml-4 lg:ml-0 lg:mt-4">
           <p class="text-white font-sans text-4xl font-bold antialiased">
             Caio Silva
           </p>
-          <div class="w-2 h-2 ml-1 mb-1 bg-secondary rounded-[50%]"></div>
-        </div>
-        <div>
+
           <p class="mt-2 text-white font-sans text-xs uppercase font-bold antialiased">
             Web Developer
           </p>
         </div>
       </div>
-      <div>
+      <div class="hidden md:hidden lg:inline">
         <a href='#home' class="group flex w-fit my-5">
         <div class="bg-secondary w-1 relative right-6"></div>
         <i class="fa-solid fa-house text-white text-md self-center mr-6 ease-in-out duration-500 transition-all group-hover:translate-x-2"></i>
@@ -46,7 +45,7 @@
             <p class="text-white text-sm ease-in-out duration-500 transition-all group-hover:translate-x-2">Skills</p>
           </a>
       </div>
-      <div class="flex flex-col">
+      <div class="hidden flex flex-col lg:inline">
         <div class="flex justify-evenly">
           <a href="http://caiosb.com/instagram" class="group w-8 h-8 flex justify-center items-center rounded-full transition duration-500 bg-secondary hover:bg-white">
             <i class="fa-brands fa-instagram transition duration-500 text-white group-hover:text-secondary"></i>
@@ -61,7 +60,7 @@
             <i class="fa-solid fa-globe transition duration-500 text-white group-hover:text-secondary"></i>
           </a>
         </div>
-        <div class="flex justify-center">
+        <div class="hidden lg:inline flex justify-center">
           <p class="mt-4 text-center text-white text-xs font-bold antialiased">
             Criado com
             <i class="fa-solid fa-heart text-red-500"></i>
@@ -71,28 +70,31 @@
       </div>
     </div>
 
-    <div class="overflow-auto snap-y snap-mandatory flex flex-col ml-4">
-      <div id="home" class='snap-always snap-start w-fit px-40 min-h-full bg-gradient-to-b from-primary via-primary to-tertiary rounded-[25px] flex flex-col justify-center'>
+    <div class="mt-4 lg:mt-0 overflow-auto snap-y snap-mandatory flex flex-col lg:ml-4">
+      <div id="home" class='p-6 h-screen snap-always snap-start w-fit lg:px-40 md:h-full lg:min-h-full bg-gradient-to-b from-primary via-primary to-tertiary rounded-[25px] flex flex-col justify-center'>
         <div class="flex items-end mt-4">
           <p class="text-white font-sans text-7xl font-bold antialiased">
             I’m Caio Silva
           </p>
-          <div class="w-2 h-2 ml-1 mb-1 bg-secondary rounded-[50%]"></div>
         </div>
         <p class="text-white font-sans leading-8 font-semibold antialiased">Desde os meus 14 anos de idade, sempre estive conectado a tecnologia, a primeira linguagem de programação que eu usei foi Pawn, além da tecnologia meus hobbies são design, aviação e astronomia.</p>
         <div class="flex space-x-4">
           <a href="#portfolio" class="group px-6 mt-4 w-fit h-12 flex items-center text-white font-semibold bg-secondary transition duration-500 rounded-full hover:bg-primary hover:drop-shadow-md hover:-translate-y-1">
-            <i class="fa-solid fa-code-branch pr-1"></i>
+            <div class="hidden lg:inline">
+              <i class="fa-solid fa-code-branch pr-1 hidden lg:inline"></i>
+            </div>
             Ver Portfolio
           </a>
           <a href="mailto:contato@caiosb.com" class="group px-6 mt-4 w-fit h-12 flex items-center text-white font-semibold bg-transparant transition duration-500 border rounded-full hover:bg-white hover:text-black hover:-translate-y-1">
-            <i class="fa-solid fa-at pr-1"></i>
+            <div class="hidden lg:inline">
+              <i class="fa-solid fa-at pr-1"></i>
+            </div>
             Fale comigo
           </a>
         </div>
       </div>
         
-      <div id="portfolio" class='border snap-always snap-start min-h-full px-10 py-20 bg-white rounded-[25px]'>
+      <div id="portfolio" class='mt-6 border snap-always snap-start min-h-full px-10 py-20 bg-white rounded-[25px]'>
         <div class="flex flex-col drop-shadow-md">  
           <p class="text-2xl font-bold text-black">Portfolio</p>
           <div class="w-8 h-2 mt-3 bg-secondary rounded-[25px]"></div>
@@ -136,7 +138,7 @@
         </div>
       </div>
 
-      <div id="experience" class='border snap-always snap-start h-auto overflow-scroll	min-h-full px-10 py-20 bg-white rounded-[25px]'>
+      <div id="experience" class='mt-6 border snap-always snap-start h-auto overflow-scroll	min-h-full px-10 py-20 bg-white rounded-[25px]'>
         <div class="flex flex-col drop-shadow-md">  
           <p class="text-2xl font-bold text-black">Experiência</p>
           <div class="w-8 h-2 mt-3 bg-secondary rounded-[25px]"></div>
@@ -207,13 +209,13 @@
         </div>
       </div>
 
-      <div id="skills" class='border snap-always snap-start h-auto overflow-scroll	min-h-full px-10 py-20 bg-white rounded-[25px]'>
+      <div id="skills" class='mt-6 border snap-always snap-start h-auto overflow-scroll	min-h-full px-10 py-20 bg-white rounded-[25px]'>
         <div class="flex flex-col drop-shadow-md">  
           <p class="text-2xl font-bold text-black">Skills</p>
           <div class="w-8 h-2 mt-3 bg-secondary rounded-[25px]"></div>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-20">
           <div class="group p-5 border rounded-[25px] flex flex-col items-center justify-center ease-in-out transition-all duration-500 hover:bg-secondary">
             <i class="fa-brands fa-js-square text-secondary text-2xl ease-in-out transition-all duration-500 group-hover:text-white"></i>
             <h3 class="text-lg font-semibold mt-2 ease-in-out transition-all duration-500 group-hover:text-white">Javascript</h3>
@@ -233,7 +235,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-6 gap-4 mt-4">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 mt-4">
           <div class="p-5 border rounded-[25px] flex flex-col items-center justify-center">
             <i class="fa-brands fa-react text-secondary text-2xl"></i>
             <h3 class="text-md font-semibold mt-2">React</h3>
@@ -241,7 +243,7 @@
 
           <div class="p-5 border rounded-[25px] flex flex-col items-center justify-center">
             <i class="fa-solid fa-mobile-screen-button text-secondary text-2xl"></i>
-            <h3 class="text-md font-semibold mt-2">React Native</h3>
+            <h3 class="text-center text-md font-semibold mt-2">React Native</h3>
           </div>
 
           <div class="p-5 border rounded-[25px] flex flex-col items-center justify-center">
